@@ -1,0 +1,15 @@
+# ============================================
+# GSE 샘플 정보 파일 템플릿
+# 탭(\t)으로 구분, '#'은 주석
+# ============================================
+# 컬럼:
+#   SRR_ID      - SRA Run Accession (필수)
+#   SAMPLE_NAME - 샘플 이름 (필수, 공백 불가)
+#   LAYOUT      - paired / single (필수)
+#   STRAND      - reverse / forward / unstranded (필수)
+#   SPECIES     - mouse / human (필수)
+# ============================================
+# SRR_ID	SAMPLE_NAME	LAYOUT	STRAND	SPECIES
+SRR7722937	Control_1	paired	reverse	mouse
+SRR7722938	Control_2	paired	reverse	mouse
+SRR7722939	Treatment_1	paired	reverse	mouse

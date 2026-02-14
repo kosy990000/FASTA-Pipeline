@@ -1,0 +1,24 @@
+# genome FASTA
+wget https://ftp.ensembl.org/pub/release-95/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
+gunzip Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
+
+# annotation GTF
+wget https://ftp.ensembl.org/pub/release-95/gtf/mus_musculus/Mus_musculus.GRCm38.95.gtf.gz
+gunzip Mus_musculus.GRCm38.95.gtf.gz
+
+STAR \
+  --runThreadN 8 \
+  --runMode genomeGenerate \
+  --genomeDir STARindex \
+  --genomeFastaFiles Mus_musculus.GRCm38.dna.primary_assembly.fa \
+  --sjdbGTFfile Mus_musculus.GRCm38.95.gtf \
+  --sjdbOverhang 149
+
+
+STAR \
+  --genomeDir ref/mm10_ensembl95/STARindex \
+  --readFilesIn SRR27543183_1.trim.fastq SRR27543183_2.trim.fastq \
+  --runThreadN 8 \
+  --outSAMtype BAM SortedByCoordinate \
+  --quantMode GeneCounts \
+  --outFileNamePrefix SRR27543183_

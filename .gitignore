@@ -1,0 +1,9 @@
+aligned/
+trimmed/
+logs/
+qc/
+raw/
+counts/
+final_data/
+config/config.sh
+ref/

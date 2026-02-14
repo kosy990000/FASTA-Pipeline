@@ -1,0 +1,3 @@
+# GSE196908 - 테스트 (1 sample)
+# SRR_ID	SAMPLE_NAME	LAYOUT	STRAND	SPECIES
+SRR18053796	Test_1	single	reverse	mouse
