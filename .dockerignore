@@ -1,0 +1,14 @@
+# 대용량 데이터 / 산출물 — 이미지에 포함하지 않음
+raw/
+trimmed/
+qc/
+aligned/
+counts/
+final_data/
+logs/
+ref/
+.git/
+*.h5ad
+*.bam
+*.fastq
+*.fastq.gz
